@@ -2,19 +2,20 @@
 const arr: { [key: string]: string }[] = [{ color: "pink", height: "320px" }];
 
 function styleToDoc(styleArr: { [key: string]: string }[], text: string): void {
-    let doc = '<p style="';
+    const p = document.createElement("p");
 
-    for (let i = 0; i < styleArr.length; i++) {
-        for (const key in styleArr[i]) {
-            doc += `${key}:${styleArr[i][key]};`;
+    for (const style of styleArr) {
+        for (const key in style) {
+            p.style[key as any] = style[key];
         }
     }
+    p.textContent = text;
 
-    doc += `">${text}</p>`;
-    document.write(doc);
+    document.body.appendChild(p);
 }
 
-//styleToDoc(arr, "Hello, World!"); // Раскомментируйте для теста
+
+styleToDoc(arr, "Hello, World!"); // Раскомментируйте для теста
 
 // @Task2.1
 
