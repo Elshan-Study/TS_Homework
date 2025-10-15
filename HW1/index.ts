@@ -73,7 +73,7 @@ function symbolForDigit(d: number): string {
     d = myTrunc(d);
     if (d < 0 || d > 9) return "Неверный ввод";
     const symbols = [')','!','@','#','$','%','^','&','*','('];
-    return symbols[d];
+    return symbols[d] ?? '';
 }
 console.log("// Task2.2");
 console.log("symbolForDigit(1) =>", symbolForDigit(1));
@@ -97,7 +97,7 @@ function statsFromArray(arr: number[]): {positives: number, negatives: number, z
     if (!Array.isArray(arr)) return null;
     let positives = 0, negatives = 0, zeros = 0, evens = 0, odds = 0;
     for (let i = 0; i < arr.length && i < 10; i++) {
-        const val = myTrunc(arr[i]);
+        const val = myTrunc(arr[i] ?? 0);
         if (val > 0) positives++;
         else if (val < 0) negatives++;
         else zeros++;

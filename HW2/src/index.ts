@@ -6,7 +6,7 @@ function styleToDoc(styleArr: { [key: string]: string }[], text: string): void {
 
     for (const style of styleArr) {
         for (const key in style) {
-            p.style[key as any] = style[key];
+            p.style[key as any] = style[key] ?? '';
         }
     }
     p.textContent = text;
