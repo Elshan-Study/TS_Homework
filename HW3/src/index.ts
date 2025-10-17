@@ -202,8 +202,12 @@ const cssBlocks = [
 ].join('\n\n');
 
 // для браузера можно раскомментировать:
-document.write(`<style>\n${cssBlocks}\n</style>`);
-document.write(card.getHtml());
+const styleTag = document.createElement('style');
+styleTag.textContent = cssBlocks;
+document.head.appendChild(styleTag);
+
+const container = document.getElementById('app') || document.body;
+container.insertAdjacentHTML('beforeend', card.getHtml());
 
 // @Task3
 class ExtendedDate extends Date {
