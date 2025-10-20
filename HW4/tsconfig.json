@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "module": "ES2020",
+    "lib": ["ES2017", "DOM"],
+    "strict": true,
+    "noImplicitAny": true,
+    "outDir": ".",
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  }
+}
+

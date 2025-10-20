@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Простой slider + калькулятор (TS)</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="dist/index.js"></script>
+</head>
+<body>
+<main class="container">
+    <section class="controls card">
+        <h2>Размер шрифта</h2>
+        <div class="row">
+            <label for="fontRange">Размер (px)</label>
+            <input id="fontRange" type="range" min="12" max="28" step="1" value="16" />
+            <span id="fontValue">16px</span>
+        </div>
+        <p class="hint">Перетяните ползунок — изменится базовый размер шрифта всего сайта.</p>
+    </section>
+
+    <section class="card calculator" aria-label="Калькулятор">
+        <div class="display">
+            <div id="expr" class="expr">&nbsp;</div>
+            <div id="res" class="res">0</div>
+        </div>
+
+        <div class="keys">
+            <button data-action="clear">C</button>
+            <button data-action="back">⌫</button>
+            <button data-value="(">(</button>
+            <button data-value=")">)</button>
+
+            <button data-value="7">7</button>
+            <button data-value="8">8</button>
+            <button data-value="9">9</button>
+            <button data-value="/">÷</button>
+
+            <button data-value="4">4</button>
+            <button data-value="5">5</button>
+            <button data-value="6">6</button>
+            <button data-value="*">×</button>
+
+            <button data-value="1">1</button>
+            <button data-value="2">2</button>
+            <button data-value="3">3</button>
+            <button data-value="-">−</button>
+
+            <button data-value="0" class="wide">0</button>
+            <button data-value=".">.</button>
+            <button data-action="equals" class="equals">=</button>
+        </div>
+        <p class="hint">Клавиатура: цифры, + - * / ( ), Enter =, Backspace, Esc — очистка.</p>
+    </section>
+</main>
+</body>
+</html>
