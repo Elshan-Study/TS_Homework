@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Палитра — добавить цвет</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="container" role="main">
+    <h1>Палитра цветов</h1>
+    <p class="lead">Добавьте цвет: название (только буквы) и значение в HEX / RGB / RGBA. Цветы добавляются как квадратики — кликните, чтобы выбрать.</p>
+
+    <form id="addForm" class="form-row" novalidate>
+        <div class="col">
+            <label for="name">Название (только буквы)</label>
+            <input id="name" name="name" type="text" inputmode="text" autocomplete="off" placeholder="Например: Рубин" />
+            <div class="small">Регистр не важен — сохраняется в нижнем регистре.</div>
+        </div>
+
+        <div class="col">
+            <label for="value">Значение (HEX / RGB / RGBA)</label>
+            <input id="value" name="value" type="text" inputmode="text" autocomplete="off"
+                   placeholder="#RRGGBB, #RRGGBBAA, rgb(255,0,0), rgba(255,0,0,0.5)" />
+            <div class="small">HEX: #RGB/#RRGGBB/#RGBA/#RRGGBBAA — или rgb(...)/rgba(...).</div>
+        </div>
+
+        <div class="col actions">
+            <div class="controls">
+                <button id="addBtn" type="submit">Добавить</button>
+                <button id="clearBtn" type="button" class="secondary">Очистить</button>
+            </div>
+            <div id="error" class="error" role="alert" aria-live="assertive" style="display:none"></div>
+        </div>
+    </form>
+
+    <section id="palette" class="palette" aria-live="polite" aria-label="Палитра цветов"></section>
+
+    <aside id="infoPanel" class="info-panel" hidden>
+        <div class="swatch" id="infoSwatch" aria-hidden="true"></div>
+        <div class="info">
+            <b id="infoName"></b>
+            <div class="small">Ввод: <span id="infoInput"></span></div>
+            <div class="small">Тип: <span id="infoType"></span></div>
+        </div>
+    </aside>
+</main>
+
+<script src="dist/app.js" defer></script>
+</body>
+</html>
