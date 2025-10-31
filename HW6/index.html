@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Movie Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <div class="search-box">
+        <h3 id="searchHeading">Search:</h3>
+        <div class="search-row" role="search" aria-labelledby="searchHeading">
+            <label for="q" class="sr-only">Movie title</label>
+            <input id="q" type="text" placeholder="Title..." aria-label="Title" />
+
+            <label for="type" class="sr-only">Type</label>
+            <select id="type" aria-label="Type">
+                <option value="">All types</option>
+                <option value="movie">Movie</option>
+                <option value="series">Series</option>
+                <option value="episode">Episode</option>
+            </select>
+
+            <button id="searchBtn" aria-label="Search">Search</button>
+        </div>
+    </div>
+
+    <h4>Films:</h4>
+    <div id="results" class="films" aria-live="polite"></div>
+    <div id="pagination" class="pagination" role="navigation" aria-label="Pagination"></div>
+</div>
+
+<div id="modalRoot" class="hidden" aria-hidden="true"></div>
+
+<script src="dist/app.js"></script>
+</body>
+</html>
