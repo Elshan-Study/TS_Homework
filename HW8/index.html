@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Animated Slider (TS)</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main class="page">
+    <h1>Animated Slider</h1>
+
+    <div class="slider-wrap" id="sliderWrap">
+        <div class="slider" id="slider">
+            <div class="slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_fRdYERWzPT-nTNgcpDQJP0pDK7mcvnrgog&s" alt="slide 1"></div>
+            <div class="slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiMxPhusfj37fe_qhub97iHW7Wp-Lno3FWrA&s" alt="slide 2"></div>
+            <div class="slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmqQxHNI9HIseg8Fu0XgJvBWU8lkTi-ttcEQ&s" alt="slide 3"></div>
+            <div class="slide"><img src="https://nunataka.ru/wp-content/uploads/2017/10/enot-poloskun-2.jpg" alt="slide 4"></div>
+            <div class="slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2jf1z86xDD6FpMyuDnUYDEh9jQGvI1PxwPg&s" alt="slide 5"></div>
+        </div>
+
+        <div class="controls">
+            <button id="btnFirst" title="First">⏮ First</button>
+            <button id="btnPrev" title="Previous">◀ Prev</button>
+            <button id="btnPlay" title="Play/Pause">▶ Play</button>
+            <button id="btnNext" title="Next">Next ▶</button>
+            <button id="btnLast" title="Last">Last ⏭</button>
+            <button id="btnFullscreen" title="Toggle fullscreen">Toggle fullscreen</button>
+        </div>
+
+        <div class="indicators" id="indicators" aria-label="Slide indicators"></div>
+    </div>
+</main>
+
+<script type="module" src="dist/app.js"></script>
+</body>
+</html>
